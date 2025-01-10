@@ -1,0 +1,250 @@
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='RegistryApi'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-01-10 04:44:34.990360', '2025-01-10 04:44:34.990363') RETURNING "key" /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+Migrating to CreateRegistries (20250110044031)
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+Migrating to CreateRegistries (20250110044031)
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+Migrating to CreateRegistries (20250110044031)
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+Migrating to CreateRegistries (20250110044031)
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+Migrating to CreateRegistries (20250110044031)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "registries" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "source" varchar, "destination" varchar, "status" integer, "confidential" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250110044031') RETURNING "version" /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+Started GET "/" for ::1 at 2025-01-09 22:08:31 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/3.4.0/gems/railties-8.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/3.4.0/gems/railties-8.0.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 76ms (Views: 12.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/registries" for ::1 at 2025-01-09 22:08:38 -0700
+Processing by RegistriesController#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1..2)):
+  
+app/models/registry.rb:2:in '<class:Registry>'
+app/models/registry.rb:1:in '<main>'
+app/controllers/registries_controller.rb:5:in 'RegistriesController#index'
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+Migrating to CreateRegistries (20250110044031)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[35m (5.1ms)[0m  [1m[35mDROP TABLE "registries" /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20250110044031' /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+Migrating to CreateRegistries (20250110044031)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "registries" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "source" varchar, "destination" varchar, "status" integer DEFAULT 0 NOT NULL, "confidential" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250110044031') RETURNING "version" /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+Started GET "/registries" for ::1 at 2025-01-09 22:22:30 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+Processing by RegistriesController#index as HTML
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1..2)):
+  
+app/models/registry.rb:2:in '<class:Registry>'
+app/models/registry.rb:1:in '<main>'
+app/controllers/registries_controller.rb:5:in 'RegistriesController#index'
+Started GET "/registries" for ::1 at 2025-01-09 22:24:41 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+Processing by RegistriesController#index as HTML
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 3.4ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1..2)):
+  
+app/models/registry.rb:2:in '<class:Registry>'
+app/models/registry.rb:1:in '<main>'
+app/controllers/registries_controller.rb:5:in 'RegistriesController#index'
+Started GET "/registries" for ::1 at 2025-01-09 22:26:51 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+Processing by RegistriesController#index as HTML
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1..2)):
+  
+app/models/registry.rb:2:in '<class:Registry>'
+app/models/registry.rb:1:in '<main>'
+app/controllers/registries_controller.rb:5:in 'RegistriesController#index'
+Started GET "/registries" for ::1 at 2025-01-09 22:29:15 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+Processing by RegistriesController#index as HTML
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1..2)):
+  
+app/models/registry.rb:2:in '<class:Registry>'
+app/models/registry.rb:1:in '<main>'
+app/controllers/registries_controller.rb:5:in 'RegistriesController#index'
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Load (0.1ms)[0m  [1m[34mSELECT "registries".* FROM "registries" WHERE "registries"."source" = 'http://www.example.edu/blade/breath' LIMIT 1 /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Create (0.5ms)[0m  [1m[32mINSERT INTO "registries" ("source", "destination", "status", "confidential", "created_at", "updated_at") VALUES ('http://www.example.edu/blade/breath', 'http://www.example.com/bikes.aspx', 0, 0, '2025-01-10 05:51:03.467587', '2025-01-10 05:51:03.467587') RETURNING "id" /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Load (0.5ms)[0m  [1m[34mSELECT "registries".* FROM "registries" WHERE "registries"."source" = 'http://example.com/bird.html' LIMIT 1 /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Create (12.7ms)[0m  [1m[32mINSERT INTO "registries" ("source", "destination", "status", "confidential", "created_at", "updated_at") VALUES ('http://example.com/bird.html', 'http://www.example.com/ornithology', 1, 0, '2025-01-10 05:51:03.490202', '2025-01-10 05:51:03.490202') RETURNING "id" /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Load (0.1ms)[0m  [1m[34mSELECT "registries".* FROM "registries" WHERE "registries"."source" = 'http://www.example.com/' LIMIT 1 /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Create (2.9ms)[0m  [1m[32mINSERT INTO "registries" ("source", "destination", "status", "confidential", "created_at", "updated_at") VALUES ('http://www.example.com/', 'https://www.example.com/', 0, 0, '2025-01-10 05:51:03.548217', '2025-01-10 05:51:03.548217') RETURNING "id" /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Load (0.1ms)[0m  [1m[34mSELECT "registries".* FROM "registries" WHERE "registries"."source" = 'https://activity.example.org/bell/bit?battle=bells&apparel=animal' LIMIT 1 /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Create (4.9ms)[0m  [1m[32mINSERT INTO "registries" ("source", "destination", "status", "confidential", "created_at", "updated_at") VALUES ('https://activity.example.org/bell/bit?battle=bells&apparel=animal', 'https://www.example.org/berry/bead.aspx', 0, 0, '2025-01-10 05:51:03.575862', '2025-01-10 05:51:03.575862') RETURNING "id" /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Load (0.1ms)[0m  [1m[34mSELECT "registries".* FROM "registries" WHERE "registries"."source" = 'https://example.edu/bed' LIMIT 1 /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Create (1.7ms)[0m  [1m[32mINSERT INTO "registries" ("source", "destination", "status", "confidential", "created_at", "updated_at") VALUES ('https://example.edu/bed', 'https://www.example.com/balance.html?animal=back&advice=brother', 2, 1, '2025-01-10 05:51:03.592362', '2025-01-10 05:51:03.592362') RETURNING "id" /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Load (2.0ms)[0m  [1m[34mSELECT "registries".* FROM "registries" WHERE "registries"."source" = 'https://www.example.edu/activity/baseball' LIMIT 1 /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Create (1.6ms)[0m  [1m[32mINSERT INTO "registries" ("source", "destination", "status", "confidential", "created_at", "updated_at") VALUES ('https://www.example.edu/activity/baseball', 'https://example.net/', 2, 0, '2025-01-10 05:51:03.626872', '2025-01-10 05:51:03.626872') RETURNING "id" /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Load (0.1ms)[0m  [1m[34mSELECT "registries".* FROM "registries" WHERE "registries"."source" = 'https://badge.example.org/' LIMIT 1 /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Create (0.9ms)[0m  [1m[32mINSERT INTO "registries" ("source", "destination", "status", "confidential", "created_at", "updated_at") VALUES ('https://badge.example.org/', 'http://example.org/', 0, 1, '2025-01-10 05:51:03.633968', '2025-01-10 05:51:03.633968') RETURNING "id" /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Load (0.1ms)[0m  [1m[34mSELECT "registries".* FROM "registries" WHERE "registries"."source" = 'https://www.example.edu/bomb/arm.html#belief' LIMIT 1 /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Create (1.7ms)[0m  [1m[32mINSERT INTO "registries" ("source", "destination", "status", "confidential", "created_at", "updated_at") VALUES ('https://www.example.edu/bomb/arm.html#belief', 'https://example.com/?bridge=advertisement', 0, 1, '2025-01-10 05:51:03.647185', '2025-01-10 05:51:03.647185') RETURNING "id" /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Load (0.1ms)[0m  [1m[34mSELECT "registries".* FROM "registries" WHERE "registries"."source" = 'https://bee.example.org/bait.php' LIMIT 1 /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Create (1.3ms)[0m  [1m[32mINSERT INTO "registries" ("source", "destination", "status", "confidential", "created_at", "updated_at") VALUES ('https://bee.example.org/bait.php', 'https://apparatus.example.com/', 1, 0, '2025-01-10 05:51:03.653498', '2025-01-10 05:51:03.653498') RETURNING "id" /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Load (0.2ms)[0m  [1m[34mSELECT "registries".* FROM "registries" WHERE "registries"."source" = 'http://www.example.net/authority/arithmetic.aspx' LIMIT 1 /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Create (1.9ms)[0m  [1m[32mINSERT INTO "registries" ("source", "destination", "status", "confidential", "created_at", "updated_at") VALUES ('http://www.example.net/authority/arithmetic.aspx', 'http://example.com/?action=believe&bells=blade', 0, 0, '2025-01-10 05:51:03.661702', '2025-01-10 05:51:03.661702') RETURNING "id" /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Load (0.7ms)[0m  [1m[34mSELECT "registries".* FROM "registries" WHERE "registries"."source" = 'https://example.com/addition' LIMIT 1 /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Create (2.2ms)[0m  [1m[32mINSERT INTO "registries" ("source", "destination", "status", "confidential", "created_at", "updated_at") VALUES ('https://example.com/addition', 'https://berry.example.com/?army=boot#army', 0, 1, '2025-01-10 05:51:03.673616', '2025-01-10 05:51:03.673616') RETURNING "id" /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Load (0.1ms)[0m  [1m[34mSELECT "registries".* FROM "registries" WHERE "registries"."source" = 'https://example.net/?bell=act' LIMIT 1 /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Create (1.9ms)[0m  [1m[32mINSERT INTO "registries" ("source", "destination", "status", "confidential", "created_at", "updated_at") VALUES ('https://example.net/?bell=act', 'http://example.com/apparel/bear?airport=beginner', 1, 1, '2025-01-10 05:51:03.680607', '2025-01-10 05:51:03.680607') RETURNING "id" /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Load (0.1ms)[0m  [1m[34mSELECT "registries".* FROM "registries" WHERE "registries"."source" = 'http://airport.example.com/' LIMIT 1 /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Create (1.3ms)[0m  [1m[32mINSERT INTO "registries" ("source", "destination", "status", "confidential", "created_at", "updated_at") VALUES ('http://airport.example.com/', 'http://bit.example.com/?bath=amusement&board=air', 2, 1, '2025-01-10 05:51:03.690129', '2025-01-10 05:51:03.690129') RETURNING "id" /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Load (0.1ms)[0m  [1m[34mSELECT "registries".* FROM "registries" WHERE "registries"."source" = 'http://www.example.com/achiever' LIMIT 1 /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Create (1.3ms)[0m  [1m[32mINSERT INTO "registries" ("source", "destination", "status", "confidential", "created_at", "updated_at") VALUES ('http://www.example.com/achiever', 'https://www.example.org/book/box#bead', 1, 0, '2025-01-10 05:51:03.697232', '2025-01-10 05:51:03.697232') RETURNING "id" /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Load (0.2ms)[0m  [1m[34mSELECT "registries".* FROM "registries" WHERE "registries"."source" = 'http://example.net/aftermath' LIMIT 1 /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Create (2.0ms)[0m  [1m[32mINSERT INTO "registries" ("source", "destination", "status", "confidential", "created_at", "updated_at") VALUES ('http://example.net/aftermath', 'http://www.example.com/attraction.php', 1, 0, '2025-01-10 05:51:03.713043', '2025-01-10 05:51:03.713043') RETURNING "id" /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Load (0.1ms)[0m  [1m[34mSELECT "registries".* FROM "registries" WHERE "registries"."source" = 'https://example.com/art/blow' LIMIT 1 /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Create (1.8ms)[0m  [1m[32mINSERT INTO "registries" ("source", "destination", "status", "confidential", "created_at", "updated_at") VALUES ('https://example.com/art/blow', 'https://example.com/exhibitions', 0, 0, '2025-01-10 05:51:03.730812', '2025-01-10 05:51:03.730812') RETURNING "id" /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Load (0.1ms)[0m  [1m[34mSELECT "registries".* FROM "registries" WHERE "registries"."source" = 'http://www.example.com/base?brick=apparatus&bridge=berry' LIMIT 1 /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Create (1.7ms)[0m  [1m[32mINSERT INTO "registries" ("source", "destination", "status", "confidential", "created_at", "updated_at") VALUES ('http://www.example.com/base?brick=apparatus&bridge=berry', 'https://apparatus.example.com/', 1, 1, '2025-01-10 05:51:03.736652', '2025-01-10 05:51:03.736652') RETURNING "id" /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Load (0.2ms)[0m  [1m[34mSELECT "registries".* FROM "registries" WHERE "registries"."source" = 'http://www.example.com/?bike=bat&aftermath=blade' LIMIT 1 /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Create (1.1ms)[0m  [1m[32mINSERT INTO "registries" ("source", "destination", "status", "confidential", "created_at", "updated_at") VALUES ('http://www.example.com/?bike=bat&aftermath=blade', 'http://www.example.org/berry.php', 0, 1, '2025-01-10 05:51:03.742445', '2025-01-10 05:51:03.742445') RETURNING "id" /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Load (0.1ms)[0m  [1m[34mSELECT "registries".* FROM "registries" WHERE "registries"."source" = 'http://baseball.example.com/birds.aspx#breath' LIMIT 1 /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Create (2.5ms)[0m  [1m[32mINSERT INTO "registries" ("source", "destination", "status", "confidential", "created_at", "updated_at") VALUES ('http://baseball.example.com/birds.aspx#breath', 'https://www.example.com/basin/bit.php#bath', 0, 0, '2025-01-10 05:51:03.746598', '2025-01-10 05:51:03.746598') RETURNING "id" /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Load (0.1ms)[0m  [1m[34mSELECT "registries".* FROM "registries" WHERE "registries"."source" = 'http://example.com/approval.aspx?bottle=advice&belief=box' LIMIT 1 /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Create (1.7ms)[0m  [1m[32mINSERT INTO "registries" ("source", "destination", "status", "confidential", "created_at", "updated_at") VALUES ('http://example.com/approval.aspx?bottle=advice&belief=box', 'http://www.example.com/?berry=account', 1, 0, '2025-01-10 05:51:03.752613', '2025-01-10 05:51:03.752613') RETURNING "id" /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Load (0.1ms)[0m  [1m[34mSELECT "registries".* FROM "registries" WHERE "registries"."source" = 'https://www.example.com/birthday/border' LIMIT 1 /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Create (1.3ms)[0m  [1m[32mINSERT INTO "registries" ("source", "destination", "status", "confidential", "created_at", "updated_at") VALUES ('https://www.example.com/birthday/border', 'https://www.example.com/appliance.php?bubble=beds', 2, 0, '2025-01-10 05:51:03.758678', '2025-01-10 05:51:03.758678') RETURNING "id" /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Load (3.1ms)[0m  [1m[34mSELECT "registries".* FROM "registries" WHERE "registries"."source" = 'https://www.example.com/aunt/basket' LIMIT 1 /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Create (3.1ms)[0m  [1m[32mINSERT INTO "registries" ("source", "destination", "status", "confidential", "created_at", "updated_at") VALUES ('https://www.example.com/aunt/basket', 'https://www.example.edu/alarm.aspx', 2, 1, '2025-01-10 05:51:03.768275', '2025-01-10 05:51:03.768275') RETURNING "id" /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Load (0.1ms)[0m  [1m[34mSELECT "registries".* FROM "registries" WHERE "registries"."source" = 'https://example.org/basketball/amusement.php?bikes=believe&airplane=attack' LIMIT 1 /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Create (2.5ms)[0m  [1m[32mINSERT INTO "registries" ("source", "destination", "status", "confidential", "created_at", "updated_at") VALUES ('https://example.org/basketball/amusement.php?bikes=believe&airplane=attack', 'https://amount.example.com/bubble.php', 0, 1, '2025-01-10 05:51:03.778312', '2025-01-10 05:51:03.778312') RETURNING "id" /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Load (0.1ms)[0m  [1m[34mSELECT "registries".* FROM "registries" WHERE "registries"."source" = 'https://birth.example.net/amusement' LIMIT 1 /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Create (1.9ms)[0m  [1m[32mINSERT INTO "registries" ("source", "destination", "status", "confidential", "created_at", "updated_at") VALUES ('https://birth.example.net/amusement', 'https://www.example.com/back/basin.htm', 1, 1, '2025-01-10 05:51:03.787922', '2025-01-10 05:51:03.787922') RETURNING "id" /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Load (1.3ms)[0m  [1m[34mSELECT "registries".* FROM "registries" WHERE "registries"."source" = 'http://example.com/bomb/adjustment?boat=border' LIMIT 1 /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='RegistryApi'*/[0m
+  [1m[36mRegistry Create (2.7ms)[0m  [1m[32mINSERT INTO "registries" ("source", "destination", "status", "confidential", "created_at", "updated_at") VALUES ('http://example.com/bomb/adjustment?boat=border', 'http://baby.example.com/', 1, 0, '2025-01-10 05:51:03.801174', '2025-01-10 05:51:03.801174') RETURNING "id" /*application='RegistryApi'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='RegistryApi'*/[0m
+Started GET "/" for 127.0.0.1 at 2025-01-09 22:51:25 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RegistryApi'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/3.4.0/gems/railties-8.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/3.4.0/gems/railties-8.0.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.1ms | GC: 0.0ms)
+Completed 200 OK in 49ms (Views: 7.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/registries" for 127.0.0.1 at 2025-01-09 22:51:29 -0700
+Processing by RegistriesController#index as HTML
+  [1m[36mRegistry Load (1.7ms)[0m  [1m[34mSELECT "registries".* FROM "registries" /*action='index',application='RegistryApi',controller='registries'*/[0m
+  ↳ app/controllers/registries_controller.rb:6:in 'RegistriesController#index'
+Completed 200 OK in 80ms (Views: 62.5ms | ActiveRecord: 3.1ms (1 query, 0 cached) | GC: 5.5ms)
+
+
+Started GET "/registries/13" for 127.0.0.1 at 2025-01-09 22:51:58 -0700
+Processing by RegistriesController#show as HTML
+  Parameters: {"id" => "13"}
+  [1m[36mRegistry Load (7.1ms)[0m  [1m[34mSELECT "registries".* FROM "registries" WHERE "registries"."id" = 13 LIMIT 1 /*action='show',application='RegistryApi',controller='registries'*/[0m
+  ↳ app/controllers/registries_controller.rb:38:in 'RegistriesController#set_registry'
+Completed 200 OK in 61ms (Views: 6.4ms | ActiveRecord: 7.1ms (1 query, 0 cached) | GC: 10.7ms)
+
+
