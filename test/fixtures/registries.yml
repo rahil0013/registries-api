@@ -1,16 +1,16 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  source: MyString
-  destination: MyString
+  source: http://www.example.edu/blade/breath
+  destination: http://www.example.com/bikes.aspx
   status: 1
   confidential: false
   created_at: 2025-01-09 21:40:31
   updated_at: 2025-01-09 21:40:31
 
 two:
-  source: MyString
-  destination: MyString
+  source: http://www.example_source.com/test/2
+  destination: http://www.example_source.com/cars.aspx
   status: 1
   confidential: false
   created_at: 2025-01-09 21:40:31
